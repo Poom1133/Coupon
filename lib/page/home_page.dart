@@ -35,6 +35,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     pointsController.text = points.toString();
+    _loadDataFromJson();
     calculateFinalPrice();
     calculateTotalprice();
   }
@@ -126,8 +127,7 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(
-              50, 20, 50, 20),
+          padding: const EdgeInsets.fromLTRB(50, 20, 50, 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

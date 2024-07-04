@@ -1,4 +1,4 @@
-import 'dart:ffi';
+// import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:playtorium_test/data.dart';
 import '../function/price_calculator.dart';
@@ -38,6 +38,16 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       finalPrice =
           calculatefinalPrice(items, usedDiscounts, _usepoints ? points : 0);
+    });
+  }
+
+  //to add discount coupon
+  void addCoupon(DiscountModel discount) {
+    setState(() {
+      // Remove any existing discount of the same type
+      usedDiscounts.removeWhere((d) => d.type == discount.type);
+      // Add the new discount
+      usedDiscounts.add(discount);
     });
   }
 
@@ -89,7 +99,10 @@ class _HomePageState extends State<HomePage> {
                             child: ListTile(
                               title: Text(d.name!),
                               subtitle: Text(d.description!),
-                              onTap: () {},
+                              onTap: () {
+                                addCoupon(d);
+                                calculateFinalPrice();
+                              },
                             ),
                           )),
                   const SizedBox(height: 10),
@@ -100,7 +113,10 @@ class _HomePageState extends State<HomePage> {
                             child: ListTile(
                               title: Text(d.name!),
                               subtitle: Text(d.description!),
-                              onTap: () {},
+                              onTap: () {
+                                addCoupon(d);
+                                calculateFinalPrice();
+                              },
                             ),
                           )),
                   const SizedBox(height: 10),
@@ -111,7 +127,10 @@ class _HomePageState extends State<HomePage> {
                             child: ListTile(
                               title: Text(d.name!),
                               subtitle: Text(d.description!),
-                              onTap: () {},
+                              onTap: () {
+                                addCoupon(d);
+                                calculateFinalPrice();
+                              },
                             ),
                           )),
                 ],
@@ -127,6 +146,8 @@ class _HomePageState extends State<HomePage> {
                     onChanged: (value) {
                       setState(() {
                         _usepoints = value;
+                        usedDiscounts.removeWhere(
+                            (d) => d.type == DiscountType.Seasonal);
                         calculateFinalPrice();
                       });
                     },

@@ -1,0 +1,125 @@
+{
+"discounts": [
+    {
+      "id": "1",
+      "type": "Coupon",
+      "parameters": "amount",
+      "amount": 150.0,
+      "max": null,
+      "category": "All",
+      "everyAmount": null,
+      "name": "150 THB off",
+      "description": "150 THB off on all items"
+    },
+    {
+      "id": "2",
+      "type": "Coupon",
+      "parameters": "percentage",
+      "amount": 10.0,
+      "max": null,
+      "category": "All",
+      "everyAmount": null,
+      "name": "10% off",
+      "description": "10% off on all items"
+    },
+    {
+      "id": "6",
+      "type": "OnTop",
+      "parameters": "percentage",
+      "amount": 5.0,
+      "max": null,
+      "category": "Clothing",
+      "everyAmount": null,
+      "name": "5% on top",
+      "description": "5% on top for clothing items"
+    },
+    {
+      "id": "7",
+      "type": "OnTop",
+      "parameters": "amount",
+      "amount": 20.0,
+      "max": null,
+      "category": "Electronics",
+      "everyAmount": null,
+      "name": "20 THB on top",
+      "description": "20 THB on top for electronics items"
+    },
+    {
+      "id": "7",
+      "type": "OnTop",
+      "parameters": "amount",
+      "amount": 50.0,
+      "max": null,
+      "category": "Clothing",
+      "everyAmount": null,
+      "name": "50 THB on top",
+      "description": "50 THB on top for clothing items"
+    },
+    {
+      "id": "6",
+      "type": "OnTop",
+      "parameters": "percentage",
+      "amount": 100.0,
+      "max": null,
+      "category": "All",
+      "everyAmount": null,
+      "name": "100% on top",
+      "description": "This is super deal"
+    },
+    {
+      "id": "6",
+      "type": "OnTop",
+      "parameters": "percentage",
+      "amount": 10.0,
+      "max": null,
+      "category": "All",
+      "everyAmount": null,
+      "name": "10% on top",
+      "description": "10% on top for all items"
+    },
+    {
+      "id": "8",
+      "type": "Seasonal",
+      "parameters": "amount",
+      "amount": 10.0,
+      "max": null,
+      "category": "All",
+      "everyAmount": 100.0,
+      "name": "10 THB every 100 THB",
+      "description": "10 THB off for every 100 THB on all items"
+    }
+  ],
+
+  "items": [
+    {
+      "id": "1",
+      "name": "T-Shirt",
+      "price": 100.0,
+      "category": "Clothing"
+    },
+    {
+      "id": "2",
+      "name": "Jeans",
+      "price": 100.0,
+      "category": "Clothing"
+    },
+    {
+      "id": "3",
+      "name": "Watch",
+      "price": 100.0,
+      "category": "Accessories"
+    },
+    {
+      "id": "4",
+      "name": "Headphones",
+      "price": 100.0,
+      "category": "Electronics"
+    },
+    {
+      "id": "5",
+      "name": "Sneakers",
+      "price": 100.0,
+      "category": "Clothing"
+    }
+  ]
+}

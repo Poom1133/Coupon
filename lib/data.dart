@@ -8,12 +8,12 @@ DiscountModel fixedDiscount1 = DiscountModel(
   id: '1',
   type: DiscountType.Coupon,
   parameters: 'amount',
-  amount: 15.0,
+  amount: 150.0,
   max: null,
   category: Category.All,
   everyAmount: null,
-  name: '15 THB off',
-  description: '15 THB off on all items',
+  name: '150 THB off',
+  description: '150 THB off on all items',
 );
 
 DiscountModel fixedDiscount2 = DiscountModel(
@@ -22,47 +22,10 @@ DiscountModel fixedDiscount2 = DiscountModel(
   parameters: 'percentage',
   amount: 10.0,
   max: null,
-  category: Category.Accessories,
-  everyAmount: null,
-  name: '10% off',
-  description: '10% off on accessories',
-);
-
-DiscountModel fixedDiscount3 = DiscountModel(
-  id: '3',
-  type: DiscountType.Coupon,
-  parameters: 'amount',
-  amount: 50.0,
-  max: null,
-  category: Category.Electronics,
-  everyAmount: null,
-  name: '50 THB off',
-  description: '50 THB off on electronics',
-);
-
-DiscountModel fixedDiscount4 = DiscountModel(
-  id: '4',
-  type: DiscountType.Coupon,
-  parameters: 'percentage',
-  amount: 20.0,
-  max: null,
-  category: Category.Clothing,
-  everyAmount: null,
-  name: '20% off',
-  description: '20% off on clothing',
-);
-
-DiscountModel fixedDiscount5 = DiscountModel(
-  id: '5',
-  type: DiscountType.Coupon,
-  parameters: 'percentage',
-  amount: 10.0,
-  max: null,
   category: Category.All,
   everyAmount: null,
   name: '10% off',
   description: '10% off on all items',
-  
 );
 
 DiscountModel onTopDiscount1 = DiscountModel(
@@ -71,10 +34,10 @@ DiscountModel onTopDiscount1 = DiscountModel(
   parameters: 'percentage',
   amount: 5.0,
   max: null,
-  category: Category.All,
+  category: Category.Clothing,
   everyAmount: null,
   name: '5% on top',
-  description: '5% on top on all items',
+  description: '5% on top for clothing items',
 );
 
 DiscountModel onTopDiscount2 = DiscountModel(
@@ -86,7 +49,40 @@ DiscountModel onTopDiscount2 = DiscountModel(
   category: Category.Electronics,
   everyAmount: null,
   name: '20 THB on top',
-  description: '20 THB on top on electronics',
+  description: '20 THB on top for electronics items',
+);
+DiscountModel onTopDiscount3 = DiscountModel(
+  id: '7',
+  type: DiscountType.OnTop,
+  parameters: 'amount',
+  amount: 50.0,
+  max: null,
+  category: Category.Clothing,
+  everyAmount: null,
+  name: '50 THB on top',
+  description: '50 THB on top for clothing items',
+);
+DiscountModel onTopDiscount4 = DiscountModel(
+  id: '6',
+  type: DiscountType.OnTop,
+  parameters: 'percentage',
+  amount: 100.0,
+  max: null,
+  category: Category.All,
+  everyAmount: null,
+  name: '100% on top',
+  description: 'This is super deal',
+);
+DiscountModel onTopDiscount5 = DiscountModel(
+  id: '6',
+  type: DiscountType.OnTop,
+  parameters: 'percentage',
+  amount: 10.0,
+  max: null,
+  category: Category.All,
+  everyAmount: null,
+  name: '10% on top',
+  description: '10% on top for all items',
 );
 
 DiscountModel seasonalDiscount = DiscountModel(
@@ -105,11 +101,11 @@ DiscountModel seasonalDiscount = DiscountModel(
 final List<DiscountModel> discounts = [
   fixedDiscount1,
   fixedDiscount2,
-  fixedDiscount3,
-  fixedDiscount4,
-  fixedDiscount5,
   onTopDiscount1,
   onTopDiscount2,
+  onTopDiscount3,
+  onTopDiscount5,
+  onTopDiscount4,
   seasonalDiscount,
 ];
 
@@ -117,35 +113,35 @@ final List<DiscountModel> discounts = [
 ItemModel item1 = ItemModel(
   id: '1',
   name: 'T-Shirt',
-  price: 250.0,
+  price: 200.0,
   category: ItemCategory.Clothing,
 );
 
 ItemModel item2 = ItemModel(
   id: '2',
   name: 'Jeans',
-  price: 500.0,
+  price: 200.0,
   category: ItemCategory.Clothing,
 );
 
 ItemModel item3 = ItemModel(
   id: '3',
   name: 'Watch',
-  price: 1200.0,
+  price: 200.0,
   category: ItemCategory.Accessories,
 );
 
 ItemModel item4 = ItemModel(
   id: '4',
   name: 'Headphones',
-  price: 750.0,
+  price: 200.0,
   category: ItemCategory.Electronics,
 );
 
 ItemModel item5 = ItemModel(
   id: '5',
   name: 'Sneakers',
-  price: 600.0,
+  price: 200.0,
   category: ItemCategory.Clothing,
 );
 

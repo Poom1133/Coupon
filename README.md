@@ -12,18 +12,20 @@
 it will show the popup to config.
 - remove used coupon
 
-# Note
-
-- all item in the store is 200 to make it easy to check calculate.
-- too edit coupons and items data use data.dart in folder lib
-
+# Guide
+- open the application file
+- select the json data file (example 'data.json' in root project)
+- select the discount campaign and See how it work!!!
+  
+  **JSON files have rules for each variable. Please follow the rules in the data model; otherwise, the data will not be imported.
+  
 # Price calculate 
   Coupon > On Top > Seasonal/Point
   ```
   final price = total - coupon > total_remain - ontop > total_remain - Seasonal/Point
   ```
 # Data model
-for data model I use in the project, you can see json form in data.dart
+for data model I use in the project, you can see json form in data.json
 ## Discount
 ```dart
 class DiscountModel {
@@ -31,8 +33,7 @@ class DiscountModel {
   final DiscountType type;
   final String parameters; // Either "amount" or "percentage"
   final double amount;
-  final double? max;
-  final double? min;
+  final double? max;  //to implement in the future
   final Category category;
   final double? everyAmount; // Nullable, used for Seasonal type
   final String? name;
@@ -47,7 +48,7 @@ class ItemModel {
   final String id;
   final String name;
   final double price;
-  final ItemCategory category; 
+  final ItemCategory category; //Clothing, Accessories, Electronics
 }
 ```
 

@@ -17,7 +17,7 @@ double calculatefinalPrice(
     subtotalByCategory[item.category] =
         subtotalByCategory[item.category]! + item.price;
   }
-  print(subtotalByCategory);
+  // print(subtotalByCategory);
   // Apply coupons first
   for (var discount in discounts.where((d) => d.type == DiscountType.Coupon)) {
     if (discount.category == Category.All) {
@@ -75,7 +75,7 @@ double calculatefinalPrice(
       }
     }
   }
-  print('after coupon:' + subtotalByCategory.toString());
+  // print('after coupon:' + subtotalByCategory.toString());
 
   // Apply on top discounts next
   // double remainingSubtotalAfterCoupons = subtotal - discountAmount;
@@ -134,7 +134,7 @@ double calculatefinalPrice(
       }
     }
   }
-  print('after ontop:' + subtotalByCategory.toString());
+  // print('after ontop:' + subtotalByCategory.toString());
 
   // Apply seasonal discounts or points
   double remainingSubtotalAfterOnTop = subtotal - discountAmount;
@@ -143,6 +143,7 @@ double calculatefinalPrice(
     double pointsToUse = points > maxPointsToUse ? maxPointsToUse : points;
     discountAmount += pointsToUse;
   } else {
+    //seasonal discounts will use only remainingSubtotalAfterOnTop in every category
     for (var discount
         in discounts.where((d) => d.type == DiscountType.Seasonal)) {
       double categorySubtotal = discount.category == Category.All
@@ -160,7 +161,7 @@ double calculatefinalPrice(
       }
     }
   }
-  print('after special:' + subtotalByCategory.toString());
+  // print('after special:' + subtotalByCategory.toString());
 
   // Calculate final price
   finalPrice = subtotal - discountAmount;

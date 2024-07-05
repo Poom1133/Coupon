@@ -30,7 +30,7 @@ for data model I use in the project, you can see json form in data.json
 ```dart
 class DiscountModel {
   final String id;
-  final DiscountType type;
+  final DiscountType type; // Coupon, OnTop, Seasonal
   final String parameters; // Either "amount" or "percentage"
   final double amount;
   final double? max;  //to implement in the future
